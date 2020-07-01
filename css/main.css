@@ -95,7 +95,8 @@ h1, h2, h3, h4, h5, h6 {
 .button {
   background-color: #ff6a6d;
   border-radius: 50px;
-  line-height: 36px;
+  line-height: 29px;
+  padding: 0 30px;
   font-size: 18px;
   border: 3px solid #ff6a6d;
   color: #fff;
@@ -239,7 +240,7 @@ a {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 @media(max-width:991.98px) {
   .header__body {
@@ -254,7 +255,7 @@ a {
   margin-right: auto;
   z-index: 1;
 }
-@media(max-width:1467px) {
+@media(max-width:991.98px) {
   .header__logo {
     margin-right: 0;
   }
@@ -313,6 +314,10 @@ a {
 
 .header__burger.active span {
   transform: scale(0);
+}
+
+.header__menu {
+  margin-right: 6.8vw;
 }
 
 .header__menu ul {
@@ -378,7 +383,7 @@ a {
 }
 
 .header__login {
-  margin-left: 6.8vw;
+  /* margin-left: 6.8vw; */
   z-index: 1;
 }
 @media(max-width:1467px) {
@@ -549,16 +554,16 @@ a {
 
 .main-btn {
   width: 100%;
-  height: 80px;
-  padding: 17px 30px;
+  font-size: 20px;
+  padding: 25px 30px;
   box-shadow: -22px 22px 30px 10px rgba(255,0,5,.19),0 0 4px 4px rgba(255,255,255,.8);
 }
 
 .light-btn {
   width: 100%;
   background: none;
-  height: 80px;
-  padding: 17px 30px;
+  font-size: 20px;
+  padding: 25px 30px;
   color: #ff6a6d;
 }
 
@@ -587,27 +592,29 @@ a {
 
 .reasons__cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin-top: 125px;
 }
-@media(max-width:991.98px) {
+/* @media(max-width:991.98px) {
   .reasons__cards {
     display: block;
     margin-top: 5vw;
   }
-}
+} */
 
 .reasons__cards li {
-  flex: 1 0 33.3%;
+  flex-basis: 360px;
+  margin-bottom: 8vw;
 }
-@media(max-width:991.98px) {
+/* @media(max-width:991.98px) {
   .reasons__cards li {
     margin-bottom: 7vw;
   }
   .reasons__cards li:last-child {
     margin-bottom: 0;
   }
-}
+} */
 
 .card__img {
   max-width: 206px;
@@ -874,7 +881,7 @@ a {
   height: 690px;
   flex: 1 0 33%;
   border-radius: 15px;
-  padding: 80px 113px 60px;
+  padding: 4vw 6vw 3px;
   display: flex;
   flex-direction: column;
   z-index: 9;
@@ -934,6 +941,7 @@ a {
   width: 93%;
   right: 0;
   bottom: -3%;
+  z-index: 0;
 }
 
 .card-info {
@@ -948,7 +956,7 @@ a {
 }
 
 .card-content {
-  padding: 50px 113px 50px;
+  padding: 2.6vw 6vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -976,7 +984,7 @@ a {
   color: #6c6a6a;
   font-size: 18px;
   line-height: 38px;
-  margin-bottom: 28px;
+  margin: 0 auto 28px;
   position: relative;
 }
 
@@ -987,6 +995,11 @@ a {
   height: 100%;
   width: 38px;
   background: url(../img/check-box-blue.png) no-repeat center;
+}
+@media(max-width:1620px) {
+  .card-list__item:before {
+    left: 1.5vw;
+  }
 }
 
 .card-list__item:last-child {
@@ -1035,9 +1048,14 @@ a {
 }
 
 .card-btn {
+  width: fit-content;
   border: none;
+  min-width: 226px;
+  margin: 0 auto;
   background: linear-gradient(66deg,#5fcef5 0,#83e4fc 100%);
-  line-height: 75px;
+  line-height: 29px;
+  padding: 23px 30px;
+  /* line-height: 75px; */
   text-align: center;
   box-shadow: -15px 15px 24px 10px #d9f3fc;
 }
